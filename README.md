@@ -7,6 +7,52 @@ working together in a team towards a common goal are my greatest passions. Those
 education as a web developer at the Karel de Grote Hogeschool in Antwerp and on the volleyball court of my local club. I
 like to create things that will give my team the extra push to achieve our goals!
 
+## Experience
+
+### Web developer
+
+#### Digiti | Oct 2017 - Present
+
+Trying to create a larger impact on the team and the customer, I decided to join a much smaller company. They gave me
+the opportunity to enrich my skills by learning and using React Native, as well as more responsibilities as it comes to
+working together with the client.
+
+### Web developer
+
+#### Intracto (now IO) | Dec 2013 - Oct 2017
+
+Original's growth and know-how did not go unnoticed: first we became part of Nivario, and afterwards we joined Intracto
+as a full-blown Drupal-team. I learned how to navigate a larger chain of command and how to work together with other
+teams who have their own area of expertise.
+
+### Drupal developer
+
+#### Original | Aug 2012 - Dec 2013
+
+A successful internship was rewarded with a much appreciated job offer, which I gladly accepted! The other colleagues,
+but especially Gunter Van Steen, really made me feel like this was the place I belonged.
+
+## Education
+
+### Internship around Drupal
+
+#### Original | Apr 2012 - Aug 2012
+
+Together with Christophe De Ruyter, we were able to understand and use the Drupal framework. First, we created an
+internal project. The successful delivery of it was rewarded with an actual case with a real client.
+
+### Multimedia and CommunicationTechnology (MCT)
+
+#### Karel de Grote Hogeschool, Antwerp | 2009 - 2012
+
+Professional bachelor degree, Web & UX track.
+
+### High school
+
+#### Sint-Ursulalyceum, Lier | 2003 - 2009
+
+Science and Math track.
+
 ## Skills
 
 ### Programming languages and tools
