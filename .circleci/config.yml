@@ -18,6 +18,8 @@ jobs:
       - run:
           name: 'Node: install dependencies'
           command: yarn
+          working_directory: ./htdocs
+          shell: /bin/bash -leo pipefail
       - save_cache:
           name: 'Node: save cache'
           key: node-v0-app-{{ .Branch }}-{{ checksum "./htdocs/yarn.lock" }}
