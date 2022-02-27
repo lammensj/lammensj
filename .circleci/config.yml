@@ -13,14 +13,14 @@ jobs:
       - restore_cache:
           name: 'Node: restore cache'
           keys:
-            - node-v0-app-{{ .Branch }}-{{ checksum './htdocs/yarn.lock' }}
+            - node-v0-app-{{ .Branch }}-{{ checksum "./htdocs/yarn.lock" }}
             - node-v0-app-{{ .Branch }}
       - run:
           name: 'Node: install dependencies'
           command: yarn
       - save_cache:
           name: 'Node: save cache'
-          key: node-v0-app-{{ .Branch }}-{{ checksum './htdocs/yarn.lock' }}
+          key: node-v0-app-{{ .Branch }}-{{ checksum "./htdocs/yarn.lock" }}
           paths:
             - ./htdocs/node_modules
       - run:
