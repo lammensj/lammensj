@@ -1,0 +1,39 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: docksal/cli:php8.0
+        user: docker
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
+    steps:
+      - checkout
+      - restore_cache:
+          name: 'Node: restore cache'
+          keys:
+            - node-v0-app-{{ .Branch }}-{{ checksum './htdocs/yarn.lock' }}
+            - node-v0-app-{{ .Branch }}
+      - run:
+          name: 'Node: install dependencies'
+          command: yarn
+      - save_cache:
+          name: 'Node: save cache'
+          key: node-v0-app-{{ .Branch }}-{{ checksum './htdocs/yarn.lock' }}
+          paths:
+            - ./htdocs/node_modules
+      - run:
+          name: 'Node: build'
+          command: '[ -f yarn.lock ] && yarn run build || echo "No yarn.lock available."'
+          working_directory: ./htdocs
+          shell: /bin/bash -leo pipefail
+
+workflows:
+  liftoff:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - main
