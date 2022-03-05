@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  webpack: (config) => {
+  webpack: (config, {isServer}) => {
+    if (!isServer) {
+      config.resolve.fallback.fs = false;
+    }
     config.watchOptions = {
       poll: 1000,
       aggregateTimeout: 300
