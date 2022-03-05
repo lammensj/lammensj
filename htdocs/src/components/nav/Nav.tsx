@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Nav.module.scss';
-import Image from 'next/image';
 
 interface IProps {
     headers: Array<{label: string, target: string}>
@@ -15,7 +14,7 @@ class Nav extends React.Component<IProps, any> {
               <a href={'#page-top'} className={'navbar-brand js-scroll-trigger mx-0'}>
                   <span className={'d-block d-md-none'}>Jasper Lammens</span>
                   <span className={'d-none d-md-block'}>
-                    <Image src={'/assets/img/jasper_lammens.png'} width={170} height={170} alt={'Profile picture'} className={'d-none'} />
+                      <img src={'/assets/img/jasper_lammens.png'} width={170} height={170} alt={'Jasper Lammens'} className={'img-fluid'} />
                   </span>
               </a>
               <button
