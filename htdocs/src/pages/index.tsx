@@ -1,7 +1,12 @@
 import Head from 'next/head'
 import React from 'react';
+import ContentService from '../services/ContentService/ContentService';
 
-class Index extends React.Component<any, any> {
+interface IProps {
+    headers: Array<{label: string, target: string}>
+}
+
+class Index extends React.Component<IProps, any> {
     render() {
         return (
             <>
@@ -19,3 +24,10 @@ class Index extends React.Component<any, any> {
 }
 
 export default Index;
+
+export const getStaticProps = async () => {
+    const contentService: ContentService = new ContentService();
+    const headers: Array<{label: string, target: string}> = contentService.getHeaders();
+
+    return {props: {headers}};
+}
