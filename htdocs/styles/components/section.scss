@@ -5,10 +5,14 @@
     font-size: calc($spacer * 1.725 + 5.7vw);
   }
   h2 {
+    @extend .mb-5;
     font-size: calc($spacer * 1.475 + 2.7vw);
   }
   h3 {
     font-size: calc($spacer * 1.325 + 0.9vw);
+  }
+  h4 {
+    @extend .text-black-50;
   }
 
   &--title--hide h2 {

@@ -15,7 +15,7 @@ class Section extends React.Component<IProps, any> {
 
     render() {
         return (
-            <section className={`section d-flex flex-column justify-content-center px-3 py-5 section--title--${this.props.hideTitle ? 'hide' : 'show'} ${styles.container}`} id={this.props.heading.target} key={this.props.heading.target}>
+            <section className={`section d-flex flex-column justify-content-center col-10 col-md-8 offset-1 offset-md-2 py-5 section--title--${this.props.hideTitle ? 'hide' : 'show'} ${styles.container}`} id={this.props.heading.target} key={this.props.heading.target}>
                 {(this.props.intro !== '') ? (
                     <div dangerouslySetInnerHTML={{__html: this.props.intro}} />
                 ) : null}
