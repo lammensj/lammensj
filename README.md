@@ -1,5 +1,7 @@
 # Lammens Jasper
 
+Nijlen - lammensjasper@gmail.com
+
 ## About me
 
 Hi 👋, my name is Jasper, and I am Belgian web developer who lives in Nijlen, a small town in the Kempen. Coding and

@@ -3,8 +3,7 @@
 @import "bootstrap/scss/mixins";
 
 @include media-breakpoint-up(md) {
-  .sidenav {
-    width: 18rem;
-    height: 100vh;
+  .container {
+    min-height: 100vh;
   }
 }

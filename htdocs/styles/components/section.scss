@@ -1,0 +1,29 @@
+.section {
+  h1 {
+    @extend .mb-0;
+    @extend .text-uppercase;
+    font-size: calc($spacer * 1.725 + 5.7vw);
+  }
+  h2 {
+    font-size: calc($spacer * 1.475 + 2.7vw);
+  }
+  h3 {
+    font-size: calc($spacer * 1.325 + 0.9vw);
+  }
+
+  &--title--hide h2 {
+    @extend .d-none;
+  }
+
+  @include media-breakpoint-up(lg) {
+    h1 {
+      font-size: $spacer * 6;
+    }
+    h2 {
+      font-size: $spacer * 3.5;
+    }
+    h3 {
+      font-size: $spacer * 2;
+    }
+  }
+}
