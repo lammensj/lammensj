@@ -1,4 +1,5 @@
 module.exports = {
+    productionBrowserSourceMaps: true,
     plugins: [
         'postcss-flexbugs-fixes',
         [
@@ -16,7 +17,10 @@ if (process.env.NODE_ENV === 'production') {
     module.exports.plugins.push([
         '@fullhuman/postcss-purgecss',
         {
-            content: ['./src/**/*.{js,jsx,ts,tsx}'],
+            content: [
+                './src/pages/**/*.{js,jsx,ts,tsx}',
+                './src/components/**/*.{js,jsx,ts,tsx}',
+            ],
             defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
             safelist: ['html', 'body']
         }
