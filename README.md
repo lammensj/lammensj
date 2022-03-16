@@ -15,7 +15,7 @@ like to create things that will give my team the extra push to achieve our goals
 
 #### Digiti | Oct 2017 - Present
 
-Trying to create a larger impact on the team and the customer, I decided to join a much smaller company. They gave me
+Trying to create a bigger impact on the team and the customer, I decided to join a much smaller company. They gave me
 the opportunity to enrich my skills by learning and using React Native, as well as more responsibilities as it comes to
 working together with the client.
 
@@ -82,7 +82,7 @@ When I am not sitting behind my desk, you can usually find me in the kitchen. I 
 is desserts or some other dish. I do not have one favorite cuisine, I like to try them all! This also led to me becoming
 a vegetarian during the summer of 2021. If you want to know more about this, just ask! 😋
 
-Another passion of mine is volleyball: I started at Smash Lier when I was 12 years old and still playing there now. In
+Another passion of mine is volleyball: I started at [Smash Lier](https://smashlier.be) when I was 12 years old and still playing there now. In
 addition to playing, I also coach and train various teams.
 
 I like the balance of these 3 things: food, volleyball and code. Being passionate about food allows me to play

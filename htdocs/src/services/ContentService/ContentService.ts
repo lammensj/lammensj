@@ -34,14 +34,14 @@ class ContentService {
         let header: string = '';
         fileContents
             .match(/^#+ [^#]*(?:#(?!#)[^#]*)*/gm)
-            .filter(Boolean)
+            ?.filter(Boolean)
             .forEach((content: string) => {
                 if (content.startsWith('## ')) {
                     contentParts.push(content);
                 } else if (contentParts.length === 0) {
                     header += content;
                 } else {
-                    const index: Number = contentParts.length - 1;
+                    const index: number = contentParts.length - 1;
                     contentParts[index] += content;
                 }
             });

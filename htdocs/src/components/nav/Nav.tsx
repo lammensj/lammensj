@@ -9,7 +9,7 @@ class Nav extends React.Component<IProps, any> {
     render() {
         return (
           <nav
-              className={`navbar navbar-expand-md navbar-dark bg-primary sticky-top p-3 d-md-flex flex-md-column justify-content-md-center ${styles.sidenav}`}
+              className={`navbar navbar-expand-md navbar-dark bg-primary sticky-top p-3 d-md-flex flex-md-column justify-content-md-center ${styles.wrapper}`}
           >
               <a href={'#page-top'} className={'navbar-brand js-scroll-trigger mx-0'}>
                   <span className={'d-block d-md-none'}>Jasper Lammens</span>

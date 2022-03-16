@@ -3,7 +3,7 @@
 @import "bootstrap/scss/mixins";
 
 @include media-breakpoint-up(md) {
-  .container {
+  .wrapper {
     min-height: 100vh;
   }
 }

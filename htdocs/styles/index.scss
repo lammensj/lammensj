@@ -1,3 +1,11 @@
-@import 'bootstrap/scss/bootstrap';
+$primary: #CA6702;
+$secondary: #E9D8A6;
+$success: #0A9396;
+$danger: #AE2012;
+$info: #A2D5F2;
+$warning: #BB3E03;
+$light: #FAFAFA;
+$dark: #001219;
 
+@import 'bootstrap/scss/bootstrap';
 @import 'components/section';

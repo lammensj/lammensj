@@ -1,33 +1,35 @@
 .section {
-  h1 {
-    @extend .mb-0;
-    @extend .text-uppercase;
-    font-size: calc($spacer * 1.725 + 5.7vw);
-  }
-  h2 {
-    @extend .mb-5;
-    font-size: calc($spacer * 1.475 + 2.7vw);
-  }
-  h3 {
-    font-size: calc($spacer * 1.325 + 0.9vw);
-  }
-  h4 {
-    @extend .text-black-50;
-  }
-
-  &--title--hide h2 {
-    @extend .d-none;
-  }
-
-  @include media-breakpoint-up(lg) {
+  :global {
     h1 {
-      font-size: $spacer * 6;
+      @extend .mb-0;
+      @extend .text-uppercase;
+      font-size: calc(1rem * 1.725 + 5.7vw);
     }
     h2 {
-      font-size: $spacer * 3.5;
+      @extend .mb-5;
+      font-size: calc(1rem * 1.475 + 2.7vw);
     }
     h3 {
-      font-size: $spacer * 2;
+      font-size: calc(1rem * 1.325 + 0.9vw);
+    }
+    h4 {
+      @extend .text-black-50;
+    }
+
+    .section--title--hide h2 {
+      @extend .d-none;
+    }
+
+    @include media-breakpoint-up(lg) {
+      h1 {
+        font-size: $spacer * 6;
+      }
+      h2 {
+        font-size: $spacer * 3.5;
+      }
+      h3 {
+        font-size: $spacer * 2;
+      }
     }
   }
 }
