@@ -68,7 +68,7 @@ jobs:
           name: 'Deployer: deploy'
           command: ./vendor/bin/dep -f ./.circleci/lammensj.yml deploy -vvv
       - run: |
-          ls -al /tmp
+          ls -al
 
 workflows:
   liftoff:
@@ -80,6 +80,8 @@ workflows:
                 - develop
                 - main
       - deploy:
+          requires:
+            - build
           filters:
             branches:
               only:
