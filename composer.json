@@ -1,0 +1,14 @@
+{
+    "name": "lammensj/lammensj",
+    "description": "Personal website",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jasper Lammens",
+            "email": "lammensjasper@gmail.com"
+        }
+    ],
+    "require": {
+        "deployer/dist": "^7.0@RC"
+    }
+}
