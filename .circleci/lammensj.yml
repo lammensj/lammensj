@@ -1,0 +1,10 @@
+import:
+  - recipe/common.php
+
+config:
+  application: 'Lammens Jasper'
+  repository: 'git@github.com:lammensj/lammens.git'
+
+tasks:
+  deploy:
+    - deploy:info

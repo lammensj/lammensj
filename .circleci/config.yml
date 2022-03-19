@@ -30,6 +30,22 @@ jobs:
           command: '[ -f yarn.lock ] && yarn run build || echo "No yarn.lock available."'
           working_directory: ./htdocs
           shell: /bin/bash -leo pipefail
+      - restore_cache:
+          name: 'Composer: restore cache'
+          keys:
+            - composer-v0-app-{{ .Branch }}-{{ checksum "./composer.lock" }}
+            - composer-v0-app-{{ .Branch }}
+      - run:
+          name: 'Composer: install dependencies'
+          command: composer install --no-dev --prefer-dist --no-interaction --profile
+      - save_cache:
+          name: 'Composer: save cache'
+          key: composer-v0-app-{{ .Branch }}-{{ checksum "./composer.lock" }}
+          paths:
+            - ./vendor
+      - run:
+          name: 'Deployer: deploy'
+          command: ./vendor/bin/dep -f ./.circleci/lammensj.yml deploy -vvv
 
 workflows:
   liftoff:
