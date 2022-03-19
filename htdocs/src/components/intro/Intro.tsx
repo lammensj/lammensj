@@ -12,7 +12,7 @@ class Intro extends React.Component<IProps, any> {
                 <div className={`position-absolute w-100 h-100 ${styles.mask}`}>
                     <div className={'container-fluid d-flex align-items-center flex-column justify-content-end h-100 pb-5 text-center'}>
                         <div dangerouslySetInnerHTML={{__html: this.props.intro}} />
-                        <div>arrow</div>
+                        <i className='bi bi-arrow-down'/>
                     </div>
                 </div>
             </div>
