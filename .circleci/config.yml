@@ -1,13 +1,18 @@
 version: 2.1
 
-jobs:
-  build:
+executors:
+  docksal:
     docker:
       - image: docksal/cli:php8.0
         user: docker
         auth:
           username: $DOCKERHUB_USERNAME
           password: $DOCKERHUB_PASSWORD
+    working_directory: /tmp
+
+jobs:
+  build:
+    executor: docksal
     steps:
       - checkout
       - restore_cache:
@@ -30,6 +35,16 @@ jobs:
           command: '[ -f yarn.lock ] && yarn run build || echo "No yarn.lock available."'
           working_directory: ./htdocs
           shell: /bin/bash -leo pipefail
+      - persist_to_workspace:
+          root: htdocs
+          paths:
+            - out
+  deploy:
+    executor: docksal
+    steps:
+      - checkout
+      - attach_workspace:
+          at: /tmp/htdocs
       - restore_cache:
           name: 'Composer: restore cache'
           keys:
@@ -46,6 +61,8 @@ jobs:
       - run:
           name: 'Deployer: deploy'
           command: ./vendor/bin/dep -f ./.circleci/lammensj.yml deploy -vvv
+      - run: |
+          ls -al /tmp
 
 workflows:
   liftoff:
