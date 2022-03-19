@@ -8,7 +8,6 @@ executors:
         auth:
           username: $DOCKERHUB_USERNAME
           password: $DOCKERHUB_PASSWORD
-    working_directory: /tmp
 
 jobs:
   build:
@@ -35,16 +34,23 @@ jobs:
           command: '[ -f yarn.lock ] && yarn run build || echo "No yarn.lock available."'
           working_directory: ./htdocs
           shell: /bin/bash -leo pipefail
+      - run:
+          name: 'Generate: create artifact'
+          command: '[ -f yarn.lock ] && tar -czf ../archive.tar.gz ./out || echo "No yarn.lock available."'
+          working_directory: ./htdocs
+      - store_artifacts:
+          name: 'General: store artifact'
+          path: ./archive.tar.gz
       - persist_to_workspace:
-          root: htdocs
+          root: ./htdocs
           paths:
-            - out
+            - ./out
   deploy:
     executor: docksal
     steps:
       - checkout
       - attach_workspace:
-          at: /tmp/htdocs
+          at: ./htdocs
       - restore_cache:
           name: 'Composer: restore cache'
           keys:
