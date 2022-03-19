@@ -1,0 +1,20 @@
+.bgImage {
+  background-image: url('/assets/img/background.webp');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.mask {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(10, 147, 150, 0.75);
+}
+
+.arrow {
+  bottom: 0;
+  left: 0;
+}

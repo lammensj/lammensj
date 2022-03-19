@@ -1,6 +1,6 @@
 # Lammens Jasper
 
-Nijlen - lammensjasper@gmail.com
+Webdeveloper living in Belgium
 
 ## About me
 
