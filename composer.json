@@ -9,6 +9,7 @@
         }
     ],
     "require": {
-        "deployer/dist": "^7.0@RC"
+        "deployer/dist": "^7.0@RC",
+        "symfony/console": "^6.0"
     }
 }

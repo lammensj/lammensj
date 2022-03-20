@@ -66,9 +66,7 @@ jobs:
             - ./vendor
       - run:
           name: 'Deployer: deploy'
-          command: ./vendor/bin/dep -f ./.circleci/lammensj.yml deploy -vvv
-      - run: |
-          ls -al
+          command: ./vendor/bin/dep -f ./.circleci/lammensj.yml deploy --github-token=$GITHUB_TOKEN --target-repo=$TARGET_REPO --target-branch=$TARGET_BRANCH -vvv
 
 workflows:
   liftoff:

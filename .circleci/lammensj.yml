@@ -9,3 +9,5 @@ config:
 tasks:
   deploy:
     - deploy:info
+    - app:setup
+    - app:deploy
