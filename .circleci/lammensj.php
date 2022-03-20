@@ -21,6 +21,7 @@ option('target-branch', NULL, InputOption::VALUE_REQUIRED, 'Specify the destinat
 
 // Setup GH
 task('github:setup', static function () {
+  run('git config credential.helper \'cache --timeout=120\'');
   run('git config --global user.email "builds@circleci.com"');
   run('git config --global user.name "CircleCI"');
 });
@@ -30,7 +31,7 @@ task('github:clone', static function () {
   $token = input()->getOption('github-token');
   $branch = input()->getOption('target-branch');
   $repo = input()->getOption('target-repo');
-  run(sprintf('git clone --branch=%s https://CircleCI:%s@github.com/%s.git {{deploy_path}}/%s', $branch, $token, $repo, $branch));
+  run(sprintf('git clone --branch=%s https://%s@github.com/%s.git {{deploy_path}}/%s', $branch, $token, $repo, $branch));
 });
 
 // Move artifact from build-dir to destination.
@@ -47,11 +48,11 @@ task('app:commit', static function () {
   run('git add -f .');
 });
 
-// Push commit
+// Push commit quietly, to prevent leaking the access token.
 task('app:push', static function () {
   cd(sprintf('{{deploy_path}}/%s', input()->getOption('target-branch')));
   if (run('git commit -m "CircleCI build $CIRCLE_BUILD_NUM pushed to Github Pages"')) {
-    run('git push');
+    run('git push -q');
   }
   else {
     warning('no changes detected');
