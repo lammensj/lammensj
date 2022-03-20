@@ -23,13 +23,13 @@ working together with the client.
 
 #### Intracto (now IO) | Dec 2013 - Oct 2017
 
-Original's growth and know-how did not go unnoticed: first we became part of Nivario, and afterwards we joined Intracto
+Originall's growth and know-how did not go unnoticed: first we became part of Nivario, and afterwards we joined Intracto
 as a full-blown Drupal-team. I learned how to navigate a larger chain of command and how to work together with other
 teams who have their own area of expertise.
 
 ### Drupal developer
 
-#### Original | Aug 2012 - Dec 2013
+#### Originall | Aug 2012 - Dec 2013
 
 A successful internship was rewarded with a much appreciated job offer, which I gladly accepted! The other colleagues,
 but especially Gunter Van Steen, really made me feel like this was the place I belonged.
@@ -38,7 +38,7 @@ but especially Gunter Van Steen, really made me feel like this was the place I b
 
 ### Internship around Drupal
 
-#### Original | Apr 2012 - Aug 2012
+#### Originall | Apr 2012 - Aug 2012
 
 Together with Christophe De Ruyter, we were able to understand and use the Drupal framework. First, we created an
 internal project. The successful delivery of it was rewarded with an actual case with a real client.
