@@ -59,6 +59,7 @@ task('app:push', static function () {
 });
 
 task('app:setup', [
+  'github:setup',
   'github:clone',
 ]);
 
