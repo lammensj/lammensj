@@ -28,10 +28,9 @@ task('github:setup', static function () {
 
 // Clone the repo.
 task('github:clone', static function () {
-  $token = input()->getOption('github-token');
   $branch = input()->getOption('target-branch');
   $repo = input()->getOption('target-repo');
-  run(sprintf('git clone --branch=%s https://%s@github.com/%s.git {{deploy_path}}/%s', $branch, $token, $repo, $branch));
+  run(sprintf('git clone --branch=%s git@github.com:%s.git {{deploy_path}}/%s', $branch, $repo, $branch));
 });
 
 // Move artifact from build-dir to destination.
@@ -60,7 +59,6 @@ task('app:push', static function () {
 });
 
 task('app:setup', [
-  'github:setup',
   'github:clone',
 ]);
 

@@ -48,6 +48,9 @@ jobs:
   deploy:
     executor: docksal
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - 'eb:45:e7:d3:d5:60:ff:27:71:54:df:95:d0:d3:cd:67'
       - checkout
       - attach_workspace:
           at: ./htdocs
