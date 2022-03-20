@@ -38,6 +38,7 @@ task('app:rsync', static function () {
   cd(sprintf('{{deploy_path}}/%s', input()->getOption('target-branch')));
   run('rsync -r --exclude=.git --delete {{deploy_path}}/htdocs/out/ ./');
   run('touch .nojekyll');
+  run('cp {{deploy_path}}/README.md ./');
 });
 
 // Commit files.
