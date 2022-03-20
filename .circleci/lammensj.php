@@ -30,7 +30,7 @@ task('github:clone', static function () {
   $token = input()->getOption('github-token');
   $branch = input()->getOption('target-branch');
   $repo = input()->getOption('target-repo');
-  run(sprintf('git clone --branch=%s https://%s@github.com/%s.git {{deploy_path}}/%s', $branch, $token, $repo, $branch));
+  run(sprintf('git clone --branch=%s https://CircleCI:%s@github.com/%s.git {{deploy_path}}/%s', $branch, $token, $repo, $branch));
 });
 
 // Move artifact from build-dir to destination.
@@ -47,11 +47,7 @@ task('app:commit', static function () {
 
 // Push commit
 task('app:push', static function () {
-  $token = input()->getOption('github-token');
-  $repo = input()->getOption('target-repo');
-
   cd(sprintf('{{deploy_path}}/%s', input()->getOption('target-branch')));
-  run(sprintf('git remote set-url origin https://%s@github.com/%s.git', $token, $repo));
   if (run('git commit -m "CircleCI build $CIRCLE_BUILD_NUM pushed to Github Pages"')) {
     run('git push');
   }
