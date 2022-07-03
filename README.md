@@ -2,6 +2,8 @@
 
 Webdeveloper living in Belgium
 
+[![CircleCI](https://circleci.com/gh/lammensj/lammensj/tree/main.svg?style=svg)](https://circleci.com/gh/lammensj/lammensj/tree/main)
+
 ## About me
 
 Hi 👋, my name is Jasper, and I am Belgian web developer who lives in Nijlen, a small town in the Kempen. Coding and
@@ -89,3 +91,11 @@ I like the balance of these 3 things: food, volleyball and code. Being passionat
 volleyball at a high (physical) level, but it also gives me the necessary nutrition to keep my brain focussed. The hours
 on the court are the perfect change of scenery between the coffee machine and the desk. The code and technical stuff
 allow me to overcome various challenges, which I gladly face!
+
+
+## Recommendations
+
+## Girlfriend
+
+Jasper is able to manage single-handedly the successful upgrade and deployment of new environmental illumination systems
+with zero cost overruns and zero safety incidents.
